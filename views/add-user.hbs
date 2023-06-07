@@ -1,0 +1,74 @@
+<nav aria-label='breadcrumb'>
+  <ol class='breadcrumb'>
+    <li class='breadcrumb-item'><a href='/'>Home</a></li>
+    <li class='breadcrumb-item active' aria-current='page'>Add User</li>
+  </ol>
+</nav>
+
+{{#if alert}}
+  <div class='alert alert-success alert-dismissible fade show' role='alert'>
+    {{alert}}
+    <button
+      type='button'
+      class='btn-close'
+      data-bs-dismiss='alert'
+      aria-label='Close'
+    ></button>
+  </div>
+{{/if}}
+<form class='row g-3 needs-validation' method='POST' action='/add-user'>
+  <div class='col-md-6'>
+    <label for='inputFirstName' class='form-label'>First Name</label>
+    <input
+      type='text'
+      class='form-control'
+      id='inputFirstName'
+      placeholder='First Name'
+      name='first_name'
+    />
+  </div>
+  <div class='col-md-6'>
+    <label for='inputLastName' class='form-label'>Last Name</label>
+    <input
+      type='text'
+      class='form-control'
+      id='inputLastName'
+      placeholder='Last Name'
+      name='last_name'
+    />
+  </div>
+  <div class='col-md-6'>
+    <label for='inputEmail' class='form-label'>Email</label>
+    <input
+      type='email'
+      class='form-control'
+      id='inputEmail'
+      placeholder='Email'
+      name='email'
+    />
+  </div>
+  <div class='col-md-6'>
+    <label for='inputPhone' class='form-label'>Phone number</label>
+    <input
+      type='tel'
+      class='form-control'
+      id='inputPhone'
+      placeholder='Phone number'
+      name='phone'
+    />
+  </div>
+  <div class='col-md-12'>
+    <label for='inputComments' class='form-label'>Comments</label>
+    <textarea
+      type='text'
+      class='form-control'
+      rows='5'
+      id='inputComments'
+      placeholder='Comments'
+      name='comments'
+    ></textarea>
+  </div>
+  <div class='col-12 d-grid'>
+    <button type='submit' class='btn btn-primary'>Add New User</button>
+  </div>
+</form>
